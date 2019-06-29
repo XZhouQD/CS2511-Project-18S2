@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="startField" fitHeight="129.0" fitWidth="185.0" layoutX="302.0" layoutY="253.0" onMouseClicked="#handleStart" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../graphics/start.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="title" fitHeight="230.0" fitWidth="438.0" layoutX="181.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../graphics/Dungeon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="editorMode" fitHeight="192.0" fitWidth="295.0" layoutX="253.0" layoutY="404.0" onMouseClicked="#handleEditorMode" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../graphics/Editor.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleKeyPress" prefHeight="479.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Canvas fx:id="playArea" height="480.0" onKeyPressed="#handleKeyPress" width="480.0" />
+      <AnchorPane layoutX="480.0" prefHeight="486.0" prefWidth="150.0">
+         <children>
+            <ImageView fitHeight="26.0" fitWidth="33.0" layoutX="14.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../graphics/sword.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="33.0" layoutX="14.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../graphics/arrow.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="33.0" layoutX="14.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../graphics/bomb_unlit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="33.0" layoutX="14.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../graphics/potion_invincibility.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="33.0" layoutX="14.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../graphics/potion_hover.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="33.0" layoutX="14.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../graphics/treasure.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="33.0" layoutX="14.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../graphics/key.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="sword" layoutX="91.0" layoutY="60.0" text="Label" />
+            <Button fx:id="restart" layoutX="1.0" layoutY="441.0" mnemonicParsing="false" onMouseClicked="#handleRestart" prefHeight="37.0" prefWidth="79.0">
+               <effect>
+                  <Bloom threshold="0.24" />
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/if_restart_82924.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="-1.0" hue="-0.02" saturation="0.05" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="exit" layoutX="81.0" layoutY="441.0" mnemonicParsing="false" onMouseClicked="#handleExit" prefHeight="37.0" prefWidth="79.0">
+               <effect>
+                  <Bloom threshold="0.24" />
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/if_logout_82778.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="-1.0" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="arrow" layoutX="91.0" layoutY="108.0" text="Label" />
+            <Label fx:id="bomb" layoutX="91.0" layoutY="155.0" text="Label" />
+            <Label fx:id="invincibility" layoutX="91.0" layoutY="200.0" text="Label" />
+            <Label fx:id="hover" layoutX="91.0" layoutY="249.0" text="Label" />
+            <Label fx:id="gold" layoutX="91.0" layoutY="295.0" text="Label" />
+            <Label fx:id="key" layoutX="91.0" layoutY="341.0" text="Label" />
+            <ImageView fitHeight="26.0" fitWidth="33.0" layoutX="14.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../graphics/armour.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="Armor" layoutX="91.0" layoutY="384.0" text="Label" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

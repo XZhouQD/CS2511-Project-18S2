@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="480.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Canvas fx:id="playArea" height="480.0" width="480.0" />
+      <Label layoutX="485.0" layoutY="14.0" text="Entity" />
+      <ChoiceBox fx:id="entities" layoutX="483.0" layoutY="29.0" prefHeight="3.0" prefWidth="104.0" />
+      <TextField layoutX="505.0" layoutY="77.0" prefHeight="23.0" prefWidth="27.0" fx:id="xPos" />
+      <Label layoutX="483.0" layoutY="59.0" text="Coordinates" />
+      <Button fx:id="exit" layoutX="481.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#handleExit" prefHeight="37.0" prefWidth="122.0">
+         <effect>
+            <Bloom threshold="0.24" />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../graphics/if_logout_82778.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="-1.0" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="enter" layoutX="553.0" layoutY="82.0" mnemonicParsing="false" onAction="#handleEnter" prefHeight="37.0" prefWidth="41.0">
+         <effect>
+            <Bloom threshold="0.49" />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../graphics/comfirm.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="-1.0" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="488.0" layoutY="81.0" prefHeight="15.0" prefWidth="7.0" text="x" />
+      <Label layoutX="488.0" layoutY="104.0" prefHeight="15.0" prefWidth="14.0" text="y" />
+      <TextField fx:id="yPos" layoutX="505.0" layoutY="100.0" prefHeight="23.0" prefWidth="27.0" />
+      <Button fx:id="play" layoutX="481.0" layoutY="398.0" mnemonicParsing="false" onAction="#handlePlay" prefHeight="37.0" prefWidth="122.0">
+         <effect>
+            <Bloom threshold="0.24" />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../graphics/play.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="-1.0" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ListView fx:id="exitMode" layoutX="481.0" layoutY="146.0" onMouseClicked="#addConditionHandler"  prefHeight="109.0" prefWidth="122.0" />
+      <ListView fx:id="selectedMode" layoutX="481.0" layoutY="255.0" onMouseClicked="#removeConditionHandler" prefHeight="103.0" prefWidth="122.0" />
+      <Label layoutX="485.0" layoutY="131.0" text="Mode" />
+   </children>
+</AnchorPane>
