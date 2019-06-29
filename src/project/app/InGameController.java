@@ -147,11 +147,11 @@ public class InGameController extends  DefaultGame{
         game.updateGame();
         // if game finishes
         if (!game.playerExit()) {
-            dialogBox("Oooops","Your warrior died  (＞﹏＜)");
+            dialogBox("Oooops","Your warrior died");
             return;
         }
         if (game.endGame()) {
-            dialogBox("Congratulations","(～o▔▽▔)～o   VICTORY!!  o～(▔▽▔o～) ");
+            dialogBox("Congratulations","VICTORY!!");
         }
         updateInventory();
         updatePlayArea();
